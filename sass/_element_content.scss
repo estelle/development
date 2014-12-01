@@ -1,0 +1,47 @@
+// doctype switch
+.booshow .boo {
+color: #da0;
+}
+.booOff .boo {
+display: none;
+}
+
+// semantic elements
+#semels > div:first-of-type {margin: auto; width: 700px;}
+#semels div {border: 2px solid #da0;
+  text-align:center;
+  width: 100%; padding:5px; margin: 5px 0;  box-sizing: border-box; }
+#semels div .divaside {
+  float: left;
+  width: 30%;
+  height:8em;}
+.divmain,
+.divarticle {
+  float: left;
+  width: 100%;
+}
+#semels .divarticle {
+  width: 69%;
+  float: right;
+}
+.divfooter {clear:both;}
+
+// figure and figcaption
+figure.styled {
+  border: 3px solid #da0;
+  border-radius: 8px;
+  float: left;
+}
+figure.styled a{
+  border: none;
+}
+figure.styled img{
+  border-radius: 8px;
+  border:none;
+}
+figure.styled figcaption{
+  background-color: rgba(255,255,255,0.5);
+  color: #da0;
+  border-top: 3px solid;
+
+}

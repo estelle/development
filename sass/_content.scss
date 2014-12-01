@@ -13,6 +13,11 @@ h1 {
   font-size:1.8rem;
   margin-bottom: 0px;
 }
+.title h1 {
+  text-align: center;
+  line-height: 80vh;
+  font-size: 3rem;
+}
 h2 {
   font-size: 1.6rem;
 }
@@ -105,5 +110,8 @@ a[target=play] {
   height: 40px; width: 40px; line-height:45px;
   text-align: center;
   border-radius: 50%;
-  &:hover {text-decoration: none; color: pink; font-weight: bold;}
+  &:hover {text-decoration: none; color: #cc0000; font-weight: bold;}
 }
+.col2 {
+  -webkit-columns: 3 250px;
+  columns: 3 250px;}

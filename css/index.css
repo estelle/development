@@ -102,7 +102,7 @@ body {
 
 .slide:after {
   content: counter(pagecount);
-  color: pink;
+  color: #cc0000;
   position: absolute;
   bottom: 2rem;
   left: 1rem; }
@@ -119,6 +119,11 @@ header {
 h1 {
   font-size: 1.8rem;
   margin-bottom: 0px; }
+
+.title h1 {
+  text-align: center;
+  line-height: 80vh;
+  font-size: 3rem; }
 
 h2 {
   font-size: 1.6rem; }
@@ -207,8 +212,12 @@ a[target=play] {
   border-radius: 50%; }
   a[target=play]:hover {
     text-decoration: none;
-    color: pink;
+    color: #cc0000;
     font-weight: bold; }
+
+.col2 {
+  -webkit-columns: 3 250px;
+  columns: 3 250px; }
 
 /* OBJECT PAGES */
 .object header {
@@ -296,3 +305,25 @@ pre {
 
   #info, #topinfo, .counter {
     display: none; } }
+:root {
+  font-size: 162.5%; }
+
+body {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif, 'Droid Sans';
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: #333333;
+  color: #ddd; }
+
+dt {
+  background-color: #444; }
+
+.title h1 {
+  color: #da0; }
+
+.slide:after {
+  color: #d0a; }
