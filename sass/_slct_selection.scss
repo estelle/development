@@ -1,0 +1,9 @@
+.thisSlide *::selection {
+   background-color: #ddaa00;
+   color: #333333;
+}
+.thisSlide.foo  {
+  -webkit-tap-highlight-color: #bada55;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}

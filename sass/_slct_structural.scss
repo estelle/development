@@ -1,0 +1,26 @@
+.structural{
+li {color: #333;}
+li:first-child,
+li:last-child {
+  font-weight: bold;
+}
+li:first-of-type,
+li:last-of-type{
+  text-decoration:line-through;
+}
+li:nth-child(even) {
+  background-color: #CCC;
+}
+li:nth-child(3) {
+  color: #CCC;
+}
+li:nth-of-type(odd) {
+  background-color: #FFF;
+}
+li:nth-of-type(4n) {
+  color: #ddaa00;
+}
+li:nth-of-type(3n-1) {
+  text-align: right;
+}
+}

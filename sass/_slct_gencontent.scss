@@ -1,0 +1,9 @@
+
+.beforeafter:before {
+  content: "before - ";
+  font-weight: bold;
+}
+.beforeafter:after {
+  content: " - after";
+  font-weight: bold;
+  }
