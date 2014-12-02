@@ -113,3 +113,6 @@ a, strong, .title h1,
 
 pre em {
   color: #060; }
+
+figure {
+  height: 80vh; }
