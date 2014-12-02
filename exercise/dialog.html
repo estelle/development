@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Dialog Element</title>
+  <style>
+    body {padding: 20px;}
+    a {position:relative;}
+    p {max-width: 45em; margin: 1em auto;}
+  </style>
+</head>
+<body>
+<dialog>This is a dialog box!<button id="close">Close</button></dialog>
+<button id="open">open</button>
+  <script defer>
+var dialog = document.querySelector('dialog');
+var show = document.querySelector('#open');
+var close = document.querySelector('#close');
+
+show.addEventListener('click', function() {
+  dialog.showModal();
+  // dialog.show();
+});
+close.addEventListener('click', function() {
+  dialog.close();
+});
+</script>
+<p>Bacon ipsum dolor as background text amet turkey flank venison shankle porchetta short ribs ball tip salami. Tail kevin tri-tip, beef ribs pork chop short ribs brisket short loin frankfurter hamburger chuck beef. Turducken salami beef ribs, picanha flank bacon ribeye pastrami t-bone capicola. Bacon boudin strip steak tenderloin.
+
+<p>Boudin venison chicken, ground round ham hock tail bresaola strip steak leberkas. Ribeye cupim ham sirloin, prosciutto pork loin boudin flank chuck drumstick. Andouille turkey salami turducken shankle, chuck pork belly ball tip porchetta. Pork loin swine drumstick, biltong turkey brisket bresaola capicola frankfurter <a href="randomlink">ribeye pork</a>. Shoulder salami cupim ball tip short loin pork loin. Pork kielbasa short ribs sausage shank spare ribs beef meatball turkey hamburger short loin boudin tri-tip sirloin. Leberkas cupim pork meatball alcatra pancetta strip steak beef pork belly.
+
+<p>Pancetta capicola cupim, biltong chicken sirloin meatball brisket shoulder sausage shank ham hock. Turkey ribeye chuck, <a href="randomlink">hamburger</a> cupim swine venison rump spare ribs salami cow pork belly. Ground round tongue kevin doner spare ribs tail. Leberkas jowl ham hock, kielbasa biltong cow corned beef chuck andouille pancetta. Pig porchetta ball tip bacon flank. Turkey tail biltong ham beef ribs ribeye. T-bone meatloaf corned beef tenderloin, shankle spare ribs pork chop pastrami.
+
+<p>Kevin alcatra shank, beef pig t-bone sirloin strip steak tongue cow. Ball tip fatback sausage ham hock short loin picanha, tri-tip turkey capicola swine tongue. Beef ribs pig brisket biltong pastrami short ribs picanha. Pork chop pork loin capicola corned beef leberkas, pork belly fatback pancetta meatloaf ribeye ball tip. <a href="randomlink">Venison pancetta sausage</a> t-bone shankle, beef meatloaf ground round tail prosciutto doner frankfurter rump.
+
+<p>Strip steak tongue shankle drumstick spare ribs short loin, swine prosciutto brisket venison jowl tenderloin short ribs. Tongue short loin meatloaf, ribeye cupim pig jerky hamburger. Strip steak short loin bresaola bacon rump sirloin corned beef short ribs brisket salami. Porchetta boudin jowl chuck, picanha bacon brisket capicola cupim sirloin biltong. Shankle swine landjaeger ground round meatloaf.
+</body>
+</html>

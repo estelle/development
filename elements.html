@@ -14,9 +14,10 @@
 
 <div id="slides">
 <!-- PRESENTATION -->
-<div class="slide intro">
-<header><h1>HTML5: <br/>Elements</h1></header>
+<div class="slide title">
+<header><h1>HTML5 Elements</h1></header>
 </div>
+
 <div class="slide normal">
 <header><h1>HTML5: Getting Started</h1></header>
 <section class="content">
@@ -331,6 +332,236 @@ document.querySelector('#closemodal2').onclick = function() {
 <div class="slide">
   <header><h1>template</h1></header>
     <section class="content">
+<script>
+ var data = [
+   { name: 'Sassafrass', color: 'Balinese', sex: 'Female (neutered)', temp: 'anti-social' },
+   { name: 'Baby Girl', color: 'Tabby', sex: 'Female (neutered)', temp: 'dog-like' },
+   { name: 'Katmandu', color: 'Orange Tabby', sex: 'Male (neutered)', temp: 'happy' }
+ ];
+</script>
+<table border='1' cellpadding=5>
+ <thead>
+  <tr>
+   <th>Name</th>
+   <th>Color</th>
+   <th>Sex</th>
+   <th>Temperment</th>
+  </tr>
+</thead>
+ <tbody>
+  <template id="row">
+   <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+   </tr>
+  </template>
+</tbody>
+</table>
+<script>
+ var template = document.querySelector('#row');
+ for (var i = 0; i < data.length; i += 1) {
+   var cat = data[i];
+   var clone = template.content.cloneNode(true);
+   var cells = clone.querySelectorAll('td');
+   cells[0].textContent = cat.name;
+   cells[1].textContent = cat.color;
+   cells[2].textContent = cat.sex;
+   cells[3].textContent = cat.temp;
+   template.parentNode.appendChild(clone);
+ }
+</script>
+<pre contenteditable>&lt;template id="row"&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+   &lt;/tr&gt;
+&lt;/template&gt;</pre>
+    </section>
+</div>
+
+<div class="slide">
+<pre contenteditable>
+&lt;table border='1' cellpadding=5&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th&gt;Name&lt;/th&gt;
+   &lt;th&gt;Color&lt;/th&gt;
+   &lt;th&gt;Sex&lt;/th&gt;
+   &lt;th&gt;Temperment&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+ &lt;tbody&gt;
+  <strong>&lt;template id="row"&gt;</strong>
+   &lt;tr&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+   &lt;/tr&gt;
+  <strong>&lt;/template&gt;</strong>
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;script&gt;
+var data = [
+   { name: 'Sassafrass', color: 'Balinese', sex: 'Female', temp: 'anti-social' },
+   { name: 'Baby Girl', color: 'Tabby', sex: 'Female', temp: 'dog-like' },
+   { name: 'Katmandu', color: 'Orange Tabby', sex: 'Male', temp: 'happy' }
+ ];
+ var template = document.querySelector('#row');
+ for (var i = 0; i &lt; data.length; i += 1) {
+   var cat = data[i];
+   var clone = template<strong>.content.cloneNode(true)</strong>;
+   var cells = clone.querySelectorAll('td');
+   cells[0].textContent = cat.name;
+   cells[1].textContent = cat.color;
+   cells[2].textContent = cat.sex;
+   cells[3].textContent = cat.temp;
+   template.parentNode.appendChild(clone);
+ }
+&lt;/script&gt;</pre>
+</div>
+
+<div class="slide">
+  <pre contenteditable=""><strong>&lt;template id="foo"&gt;</strong>
+   <em>&lt;style&gt;
+      /* styles scoped to template only
+   &lt;/style&gt;</em>
+  &lt;div class="someclass"&gt;
+     template text here
+    &lt;div class="someotherclass"&gt;
+    <strong>&lt;content&gt;&lt;/content&gt;</strong>
+    &lt;/div&gt;
+  &lt;/div&gt;
+<strong>&lt;/template&gt;</strong></pre>
+</div>
+
+<div class="slide">
+  <pre contenteditable><strong>&lt;template id="foo"&gt;</strong>
+   <em>&lt;style&gt;
+      /* styles scoped to template only
+   &lt;/style&gt;</em>
+  &lt;div class="someclass"&gt;
+     template text here
+    &lt;div class="someotherclass"&gt;
+    <strong>&lt;content <i>select=".someSelector"</i>&gt;&lt;/content&gt;</strong>
+    &lt;/div&gt;
+  &lt;/div&gt;
+<strong>&lt;/template&gt;</strong></pre>
+</div>
+
+<div class="slide">
+  <header><h1></h1></header>
+    <section class="content"><template id="nameTagTemplate">
+<style>
+.outer {
+  border: 2px solid brown;
+  border-radius: 1em;
+  background: red;
+  font-size: 20pt;
+  width: 12em;
+  height: 7em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.boilerplate {
+  color: white;
+  font-family: sans-serif;
+  padding: 0.5em;
+}
+.name {
+  color: black;
+  background: white;
+  font-family: "Marker Felt", cursive;
+  font-size: 45pt;
+  padding-top: 0.2em;
+}
+</style>
+<div class="outer">
+  <div class="boilerplate">
+    Hi! My name is
+  </div>
+  <div class="name">
+    <content select='.f'></content>
+    <content select='.l'></content>
+  </div>
+</div>
+</template>
+
+
+<div class="name-tag"><i class="f">Jean</i> <i class="l">Phillippe</i></div>
+<div class="name-tag"><i class="l">Weyl</i>, <i class="f">Estelle</i></div>
+<div class="name-tag"><i class="l">Smith</i>, <i class="f">Jane</i></div>
+
+<script>
+var el = document.querySelectorAll('.name-tag');
+var template = document.getElementById('nameTagTemplate');
+for(var i = 0; i < el.length; i++) {
+  var shadow = el[i].createShadowRoot();
+  var clone = document.importNode(template.content, true);
+  shadow.appendChild(clone);
+}</script>
+    </section>
+</div>
+
+
+
+<div class="slide">
+  <header><h1></h1></header>
+    <section class="content"><pre contenteditable><strong>
+&lt;div class="name-tag"&gt;&lt;i class="f"&gt;Jean&lt;/i&gt; &lt;i class="l"&gt;Phillippe&lt;/i&gt;&lt;/div&gt;
+&lt;div class="name-tag"&gt;&lt;i class="l"&gt;Weyl&lt;/i&gt;, &lt;i class="f"&gt;Estelle&lt;/i&gt;&lt;/div&gt;
+&lt;div class="name-tag"&gt;&lt;i class="l"&gt;Smith&lt;/i&gt;, &lt;i class="f"&gt;Jane&lt;/i&gt;&lt;/div&gt;
+
+&lt;template id="nameTagTemplate"&gt;</strong>
+&lt;style&gt;
+.outer {
+  border: 2px solid brown;
+  border-radius: 1em;
+  background: red;
+  font-size: 20pt;
+  width: 12em;
+  height: 7em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.boilerplate {
+  color: white;
+  font-family: sans-serif;
+  padding: 0.5em;
+}
+.name {
+  color: black;
+  background: white;
+  font-family: "Marker Felt", cursive;
+  font-size: 45pt;
+  padding-top: 0.2em;
+}
+&lt;/style&gt;
+&lt;div class="outer"&gt;
+  &lt;div class="boilerplate"&gt;
+    Hi! My name is
+  &lt;/div&gt;
+  &lt;div class="name"&gt;
+   <strong> &lt;content select=".f"&gt;&lt;/content&gt;</strong>
+   <strong> &lt;content select=".l"&gt;&lt;/content&gt;</strong>
+  &lt;/div&gt;
+&lt;/div&gt;
+<strong>&lt;/template&gt;
+
+&lt;script&gt;</strong>
+var el = document.querySelectorAll('.name-tag');
+var template = document.getElementById('nameTagTemplate');
+for(var i = 0; i &lt; el.length; i++) {
+  var shadow = el[i]<strong>.createShadowRoot()</strong>;
+  var clone = document<strong>.importNode(template.content, true)</strong>;
+  shadow.appendChild(clone);
+}
+<strong>&lt;/script&gt;</strong>
+</pre>
     </section>
 </div>
 
@@ -751,13 +982,22 @@ role         acquaintance
       </section>
   </div>
 
-
+<div class="slide">
+  <header><h1>Exercise</h1></header>
+    <section class="content">
+      <p>Options:
+        <ol>
+          <li><a href="exercise/dialog.html">dialog</a></li>
+          <li><a href="exercise/template.html">template</a></li>
+          <li><a href="exercise/details.html">details &amp; summary</a></li>
+        </ol>
+    </section>
+</div>
 
 
 
 <div class="slide title">
-     <h1>Forms</h1>
-    <h1><a href="forms.html">Go ➹</a></h1>
+     <h1><a href="../forms/index.html">Forms ➹</a></h1>
 </div>
 
 <!-- END of PRESENTATION -->

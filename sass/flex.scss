@@ -1,0 +1,18 @@
+@import "flex_content";
+@import "theme_grey";
+@import "icons";
+
+ /* Browser history */
+div.divider, .icons {
+  clear: both;
+}
+div.divider .icons,
+div.divider p
+ {
+  float: left;
+}
+.divider p {font-weight: bold; margin: 0;}
+
+figure > :not(figcaption) {
+  width: calc(100% - 40px);
+}
