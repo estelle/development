@@ -75,7 +75,7 @@
 &lt;html<span class="boo">  xmlns=&quot;http://www.w3.org/1999/xhtml&quot;</span>&gt;
 &lt;head&gt;
 &lt;meta<span class="boo">  http-equiv=&quot;Content-Type&quot; content=&quot;text/html;</span> charset=UTF-8<span class="boo"> &quot; </span>/&gt;
-&lt;title&gt;<b id="newdoctitle">XHTML1 Strict Document</b>&lt;/title&gt;
+&lt;title&gt;<strong id="newdoctitle">XHTML1 Strict Document</strong>&lt;/title&gt;
 &lt;script<span class="boo">  type=&quot;text/javascript&quot;</span> src=&quot;boo.js&quot;&gt;&lt;/script&gt;
 &lt;link<span class="boo">  type=&quot;text/css&quot;</span> rel=&quot;stylesheet&quot; href=&quot;a.css&quot;/&gt;
 &lt;/head&gt;
@@ -187,7 +187,7 @@ function newDoctype(el){
             <div class="divnav">&lt;nav&gt;</div>
             <div  class="divmain">
                 <div class="divaside">&lt;aside&gt;</div>
-                &lt;div id="content"&gt;
+                &lt;main&gt;
                     <div class="divarticle">&lt;article&gt;
                       <div class="divsection">&lt;section&gt;</div>
                         <div class="divsection">&lt;section&gt;</div>
@@ -200,7 +200,7 @@ function newDoctype(el){
 
      <div class="slide" style="opacity: 0.3;">
       <header>
-         <h1>hgroup
+         <h1>hgroup - removed from spec
          </h1>
       </header>
       <section class="content">
@@ -219,7 +219,7 @@ function newDoctype(el){
          <h1>figure &amp; figcaption
          </h1>
       </header>
-      <figure id="figureex" style="height: 200px;"><img src="" alt="HTML5 &amp; CSS3 for the Real World" style="height: 50px;"><figcaption>My Book</figcaption></figure>
+      <figure id="figureex" style="height: auto;"><img src="assets/img/realworld.jpg" alt="HTML5 &amp; CSS3 for the Real World" style="height: 200px; width: auto;"><figcaption>My Book</figcaption></figure>
 
       <section class="content">
         <pre contenteditable style="float:left;">&lt;figure&gt;
@@ -261,7 +261,6 @@ function newDoctype(el){
       &lt;li&gt;5 stars from Barns &amp;amp; Noble&lt;/li&gt;
    &lt;/ul&gt;
 &lt;/details&gt;</pre>
-<p>Example: Click below</p>
 <details>
    <summary>5 of 5 stars from three reviews</summary>
    <ul>
@@ -284,8 +283,8 @@ function newDoctype(el){
 &lt;/dialog></pre>
       <pre contenteditable>var dialog = document.querySelector('dialog');
 document.querySelector('#show').addEventListener('click', function() {
-  //dialog.show();
   dialog.showModal();
+  // dialog.show();
 });
 document.querySelector('#close').addEventListener('click', function() {
   dialog.close();
@@ -294,13 +293,46 @@ document.querySelector('#close').addEventListener('click', function() {
     <script defer>var dialog = document.querySelector('dialog');
 document.querySelector('#dialogbutton').onclick = function() {
   dialog.showModal();
-  //dialog.show();
+  // dialog.show();
 };
 document.querySelector('#closemodal').onclick = function() {
   dialog.close();
 };</script>
 </div>
 
+
+<div class="slide">
+  <header><h1>Dialog</h1></header>
+    <section class="content">
+      <dialog>This is a dialog box!<button id="closemodal2">Close</button></dialog>
+      <pre contenteditable>&lt;dialog open>
+  This is a dialog box!
+  &lt;button id="closemodal">Close&lt;/button>
+&lt;/dialog></pre>
+      <pre contenteditable>var dialog = document.querySelector('dialog');
+document.querySelector('#show').addEventListener('click', function() {
+  // dialog.showModal();
+  dialog.show();
+});
+document.querySelector('#close').addEventListener('click', function() {
+  dialog.close();
+});</pre><button id="dialogbutton2">Show dialog</button>
+    </section>
+    <script defer>var dialog2 = document.querySelectorAll('dialog');
+document.querySelector('#dialogbutton2').onclick = function() {
+  // dialog.showModal();
+   dialog2[1].show();
+};
+document.querySelector('#closemodal2').onclick = function() {
+  dialog2[1].close();
+};</script>
+</div>
+
+<div class="slide">
+  <header><h1>template</h1></header>
+    <section class="content">
+    </section>
+</div>
 
    <div class="slide">
       <header>
@@ -464,28 +496,71 @@ overflow:scroll; text-align:center ">
       <p style="text-align:left; margin-top: -2px;">"Ruby" are short runs of text alongside the base text, typically used in East Asian documents to indicate pronunciation or to provide a short annotation. </p>
       </header>
       <section class="content" style="margin-top: -38px;">
-      <ul>
+      <ul class="col2">
         <li><img src="http://dev.w3.org/csswg/css3-ruby/images/licence.png" alt="" style="float:right"/>&lt;ruby&gt; <span class="notes">container for the next 2 elements</span></li>
         <li>&lt;rt&gt; <span class="notes">ruby text</span></li>
         <li>&lt;rp&gt; <span class="notes">ruby parenthesis</span></li>
+        <li>&lt;rtc&gt; <span class="notes">ruby text container</span></li>
         </ul>
-        <pre contenteditable><b>display:</b> ruby | ruby-base | ruby-text |
+        <pre contenteditable><strong>display:</strong> ruby | ruby-base | ruby-text |
    ruby-base-container | ruby-text-container;
 
-<b>ruby-align</b>: <strong>auto</strong> | start | left | center | end | right |
+<strong>ruby-align</strong>: <strong>auto</strong> | start | left | center | end | right |
    distribute-letter | distribute-space | line-edge;
 
-<b>ruby-overhang</b>: auto | start | end | <strong>none</strong>;
+<strong>ruby-overhang</strong>: auto | start | end | <strong>none</strong>;
 
-<b>ruby-position</b>: before | after | right | inline;
+<strong>ruby-position</strong>: before | after | right | inline;
 
-<b>ruby-span</b>: attr(x) | <strong>none</strong>;</pre>
+<strong>ruby-span</strong>: attr(x) | <strong>none</strong>;</pre>
  <p><a href="http://html5doctor.com/ruby-rt-rp-element/">More Information</a></p>
       </section>
   </div>
 
 
+<div class="slide">
+  <header><h1>Ruby</h1></header>
+    <section class="content"><pre contenteditable style="width: 50%; float: right; vertical-align: top;">
+&lt;ruby&gt;
+  ♥&lt;rp&gt;: &lt;/rp&gt;
+   &lt;rt&gt;Heart&lt;/rt&gt;
+   &lt;rp&gt;, &lt;/rp&gt;
+   &lt;rtc&gt;
+      &lt;rt lang=fr&gt;Cœur&lt;/rt&gt;
+    &lt;/rtc&gt;
+    &lt;rp&gt;.&lt;/rp&gt;
+  ☘&lt;rp&gt;: &lt;/rp&gt;
+   &lt;rt&gt;Shamrock&lt;/rt&gt;
+   &lt;rp&gt;, &lt;/rp&gt;
+   &lt;rtc&gt;
+      &lt;rt lang=fr&gt;Trèfle&lt;/rt&gt;
+    &lt;/rtc&gt;
+    &lt;rp&gt;.&lt;/rp&gt;
+  ✶&lt;rp&gt;: &lt;/rp&gt;
+   &lt;rt&gt;Star&lt;/rt&gt;
+   &lt;rp&gt;, &lt;/rp&gt;
+   &lt;rtc&gt;
+      &lt;rt lang=fr&gt;Étoile&lt;/rt&gt;
+    &lt;/rtc&gt;
+    &lt;rp&gt;.&lt;/rp&gt;
+&lt;/ruby&gt;</pre>
+<p>If ruby is supported:</p>
+       <ruby>
+  ♥<rp>: </rp><rt>Heart</rt><rp>, </rp><rtc><rt lang=fr>Cœur</rt></rtc><rp>.</rp>
+  ☘<rp>: </rp><rt>Shamrock</rt><rp>, </rp><rtc><rt lang=fr>Trèfle</rt></rtc><rp>.</rp>
+  ✶<rp>: </rp><rt>Star</rt><rp>, </rp><rtc><rt lang=fr>Étoile</rt></rtc><rp>.</rp>
+</ruby>
+<p>If not: </p>
+  <div>
+  ♥<span>: </span><span>Heart</span><span>, </span><span><span lang=fr>Cœur</span></span><span>.</span>
+  ☘<span>: </span><span>Shamrock</span><span>, </span><span><span lang=fr>Trèfle</span></span><span>.</span>
+  ✶<span>: </span><span>Star</span><span>, </span><span><span lang=fr>Étoile</span></span><span>.</span>
+</div>
 
+
+
+    </section>
+</div>
 
 
       <div class="slide">
@@ -495,16 +570,16 @@ overflow:scroll; text-align:center ">
       </header>
       <section class="content">
       <ul>
-        <li>tabindex <b class="notes imp">/* now applicable to any element (-1)</b></li>
-        <li>hidden <b class="notes imp">/* no longer relevant */</b></li>
-        <li class="bad">contextMenu <b class="notes imp">contextmenu="menuID"</b></li>
-        <li>spellCheck <b class="notes imp">/* denotes errors */</b></li>
-        <li>data-* <b class="notes imp">/* anything you want, accessible via dataset */</b></li>
-        <li>ContentEditable <b class="notes imp">/* you can edit. accessible via the DOM */</b></li>
-        <li>draggable <b class="notes imp">/* with the drag &amp; drop API */</b></li>
-        <li>dropzone <b class="notes imp">/* with the drag &amp; drop API */</b></li>
-        <li>microdata attributes <b class="notes imp">/* like microformats */</b></li>
-        <li>ARIA <b class="notes imp">/* accessibility */</b></li>
+        <li>tabindex <strong class="notes imp">/* now applicable to any element (-1)</strong></li>
+        <li>hidden <strong class="notes imp">/* no longer relevant */</strong></li>
+        <li class="bad">contextMenu <strong class="notes imp">contextmenu="menuID"</strong></li>
+        <li>spellCheck <strong class="notes imp">/* denotes errors */</strong></li>
+        <li>data-* <strong class="notes imp">/* anything you want, accessible via dataset */</strong></li>
+        <li>ContentEditable <strong class="notes imp">/* you can edit. accessible via the DOM */</strong></li>
+        <li>draggable <strong class="notes imp">/* with the drag &amp; drop API */</strong></li>
+        <li>dropzone <strong class="notes imp">/* with the drag &amp; drop API */</strong></li>
+        <li>microdata attributes <strong class="notes imp">/* like microformats */</strong></li>
+        <li>ARIA <strong class="notes imp">/* accessibility */</strong></li>
       </ul>
       </section>
   </div>
@@ -512,7 +587,7 @@ overflow:scroll; text-align:center ">
   <div class="slide normal">
      <header><h1>Global Attributes</h1></header>
      <section class="content">
-<ul class="column">
+<ul class="col2">
         <li>accesskey
 </li>
         <li>class
@@ -575,21 +650,8 @@ without changing &lsquo;tab&raquo; order</li>
 
       <textarea spellcheck=true>This paragrph has an error.</textarea>
 
-      <ul class="icons" style="clear: both;">
-         <li class="chrome">Chrome</li>
-         <li class="safari ">Safari</li>
-         <li class="firefox">Firefox 2</li>
-         <li class="opera ">Opera</li>
-         <li class="ie ">IE</li>
-     </ul>
      <pre contenteditable>spellcheck="true | false"</pre>
-       <ul class="icons" style="clear: both;">
-         <li class="chrome">Chrome</li>
-         <li class="safari ">Safari</li>
-         <li class="firefox new">Firefox 9</li>
-         <li class="opera ">Opera</li>
-         <li class="ie new">IE 10</li>
-     </ul>
+       Since IE 10
       </section>
   </div>
      <div class="slide">
@@ -601,11 +663,11 @@ without changing &lsquo;tab&raquo; order</li>
 
       <section class="content">
 
-        <pre contenteditable>&lt;div id="card27" <b>data-cardID</b>="27" <b>data-row</b>="3" <b>data-col</b>="2"&gt;&lt;/div&gt;</pre>
+        <pre contenteditable>&lt;div id="card27" <strong>data-cardID</strong>="27" <strong>data-row</strong>="3" <strong>data-col</strong>="2"&gt;&lt;/div&gt;</pre>
         <pre contenteditable>var info = document.querySelector('#card27');
 var cardinfo = [];
-for (var key in info.<b>dataset</b>) {
-  cardinfo.push(key, ': ', info.<b>dataset</b>[key], ',');
+for (var key in info.<strong>dataset</strong>) {
+  cardinfo.push(key, ': ', info.<strong>dataset</strong>[key], ',');
 }
 var currentCard = cardinfo.join('');</pre>
         <p>Result:</p>

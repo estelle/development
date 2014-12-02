@@ -43,5 +43,10 @@ figure.styled figcaption{
   background-color: rgba(255,255,255,0.5);
   color: #da0;
   border-top: 3px solid;
+}
 
+/* details & summary */
+details {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px;
 }

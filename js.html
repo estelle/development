@@ -598,6 +598,20 @@ for(var i=0; i &lt; slides.length; i++){
 
 
 
+<div class="slide">
+  <header><h1>In the spec....<br/>
+    &nbsp; &nbsp; &nbsp; but not yet supported</h1></header>
+    <section class="content">
+<pre contenteditable>
+var match = el<strong>.matches(</strong>relative selector<strong>)</strong>;  // false
+
+var oneElement = el<strong>.find(</strong>relative selector<strong>)</strong>;  // null
+var nodeList = el<strong>.findAll(</strong>relative selector<strong>)</strong>; // empty collection</pre>
+<a href="http://dev.w3.org/2006/webapi/selectors-api2/#findelements" target="foo">Selectors API</a>
+
+    </section>
+</div>
+
 <div class="slide title">
      <h1>classList</h1>
      <section>
@@ -619,11 +633,11 @@ for(var i=0; i &lt; slides.length; i++){
 <span style="font-size: 0.85rem;">d.querySelector('#foo').</span><strong>classList.toggle</strong>('bar');</pre>
 
 <pre contenteditable>
-fooCL = d.querySelector('#foo').</span><strong>classList</strong>;
-fooCL.<strong>add</strong>('bar');
-fooCL.<strong>remove</strong>('bar');
-fooCL.<strong>toggle</strong>('bar');
-fooCL.<strong>contains</strong>('bar'); // true or false</pre>
+var fooCL = d.querySelector('#foo').</span><strong>classList</strong>;
+    fooCL.<strong>add</strong>('bar');
+    fooCL.<strong>remove</strong>('bar');
+    fooCL.<strong>toggle</strong>('bar');
+    fooCL.<strong>contains</strong>('bar'); // true or false</pre>
 </section>
 </div>
 
@@ -631,12 +645,12 @@ fooCL.<strong>contains</strong>('bar'); // true or false</pre>
 <header><h1>classList</h1></header>
 <section class="content">
         <pre contenteditable>
-<b>cl</b> = d.querySelector('#foo').<b>classList</b>;
-cl.<b>add</b>('zap');
-cl.<b>remove</b>('bar');
-cl.<b>toggle</b>('bar');
-cl.<b>contains</b>('bar')); // true or false
-var classes = cl.toString();
+<b>foo</b> = d.querySelector('#foo');
+foo.<b>classList</b>.<b>add</b>('zap');
+foo.<b>classList</b>.<b>remove</b>('bar');
+foo.<b>classList</b>.<b>toggle</b>('bar');
+foo.<b>classList</b>.<b>contains</b>('bar')); // true or false
+var classes = foo.<b>classList</b>.toString();
 </pre>
 
       </section>
@@ -654,28 +668,13 @@ $('.foo').addClass('bar');</pre>
 <pre contenteditable>
 var foos = d.querySelectorAll('.foo');
 
-for(var i = 0; i < foos.length; i++){
+for(var i = 0; i &lt; foos.length; i++){
   foos[i].classList.add('bar');
 }</pre>
 
 </section>
 </div>
 
-
-<div class="slide">
-  <header><h1>In the spec....<br/>
-    &nbsp; &nbsp; &nbsp; but not yet supported</h1></header>
-    <section class="content">
-<pre contenteditable>
-var match = el.matches(relative selector);  // false
-
-
-var oneElement = el.find(relative selector);  // null
-var nodeList = el.findAll(relative selector); // empty collection</pre>
-
-
-    </section>
-</div>
 
 <div class="slide title">
      <h1>data- &amp; dataset</h1>
@@ -859,7 +858,7 @@ for(var i=0; i &lt; cards.length; i++){
 
 
 <div class="slide title">
-<h1>Up Next: Forms</h1>
+<h1>Up Next: <a href="elements.html">Elements</a></h1>
     <section class="content">
     </section>
 </div>

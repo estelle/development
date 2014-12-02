@@ -269,17 +269,6 @@ pre, style {
   line-height: 1.6;
   tab-size: 2; }
 
-pre b {
-  font-weight: normal;
-  color: #c61800;
-  text-shadow: #c61800 0 0 1px; }
-
-pre em {
-  font-weight: normal;
-  font-style: normal;
-  color: #18a600;
-  text-shadow: #18a600 0 0 1px; }
-
 pre {
   max-height: 80vh;
   overflow: auto; }
