@@ -30,7 +30,7 @@
 <div class="slide">
 <header><h1>My First Framework</h1></header>
 <!--<figure><object data="http://estelleweyl.com/portfolio/dhtml.htm"></object></figure>-->
-<a href="http://estelleweyl.com/portfolio/dhtml.htm" class="objectlink">My old portfolio</a>
+<a href="http://estelleweyl.com/portfolio/dhtml.htm" class="objectlink" target="foo">My old portfolio</a>
 </div>
 
 
@@ -192,11 +192,14 @@ Don't Reinvent The Wheel</h1></header>
 </div>
 
 <div class="slide">
-<!--<figure><object data="http://jsfiddle.net/chriscoyier/WTAr9/"></object></figure>-->
+  <header><h1>Using a library</h1></header>
+<!--<figure><object data="http://jsfiddle.net/chriscoyier/WTAr9/"></object></figure>--><a href="http://jsfiddle.net/chriscoyier/WTAr9/" class="objectlink" target="foo">Go</a>
 </div>
 
+
 <div class="slide">
-<!--<figure><object data="http://jsfiddle.net/estelle/WTAr9/210/"></object></figure>-->
+  <header><h1>No library</h1></header>
+<!--<figure><object data="http://jsfiddle.net/estelle/WTAr9/210/"></object></figure>--><a href="http://jsfiddle.net/estelle/WTAr9/210/" class="objectlink" target="foo">Go</a>
 </div>
 
 <div class="slide">
@@ -234,7 +237,7 @@ for (i = 0, count = links.length; i &lt; count; i++){
 <div class="slide">
   <header><h1>Is it possible with only CSS?</h1></header>
     <section class="content">
-      <h1 style="color: red">Still working on this</h1>
+      <h1 style="color: red">Might work one day!</h1>
       <pre contenteditable>a[href^='http']:before {
   content: 'http://g.etfv.co/' + attr(href);
 }</pre>
