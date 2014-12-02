@@ -343,7 +343,9 @@
 
 
 <div class="slide">
-  <figure><object data="http://codepen.io/estelle/pen/KCzfH/"></object></figure>
+  <header><h1>Is Flexbox supported in your browser?</h1>
+  <figure><iframe height='550' scrolling='no' src='http://codepen.io/estelle/embed/KCzfH/' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 80vh'>See the Pen <a href='http://codepen.io/estelle/pen/KCzfH/'>Browser @support for Flexbox</a> by Estelle Weyl (<a href='http://codepen.io/estelle'>@estelle</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe></figure>
   <a href="http://codepen.io/estelle/pen/KCzfH/" class="objectlink" target="_new">Visit Site</a>
  </div>
 
@@ -435,17 +437,17 @@
   <header><h1><code>flex</code> shorthand</h1></header>
     <section class="content def">
       <p><code>flex-grow</code>:
-How to divide the extra space. default: 1.</p>
+How to divide the extra space. Non-negative number. default: 1.</p>
 
 <p><code>flex-shrink</code>:
-How to shrink if there's not enough room. default: 1. </p>
+How to shrink if there's not enough room.  Non-negative number. default: 1. </p>
 
 <p><code>flex-basis</code>:
 the
 starting size
 before free
 space is
-distributed. length value or <code>auto</code> . If set to <code>auto</code>, sets to flex item’s main size property. </p>
+distributed. length value, content or <code>auto</code> . If set to <code>auto</code>, sets to flex item’s main size property. </p>
     </section>
 </div>
 
@@ -541,6 +543,93 @@ li {
 </div>
 
 
+<div class="slide">
+  <header><h1>CSS calc() function</h1></header>
+    <section class="content">    <p>calc()</p>
+    <pre contenteditable="">width: <b>calc</b>(50% - 40px);
+background: linear-gradient(
+  black <b>calc</b>(50% - 2px),
+  white <b>calc</b>(50% - 2px),
+  white <b>calc</b>(50% + 2px),
+  black <b>calc</b>(50% + 2px));
+</pre>
+
+    </section></div>
+
+<div class="slide">
+<header><h1>calc()</h1></header>
+<figure><object data="files/calc.html"></object></figure>
+<a href="files/calc.html" target="play" class="objectlink">↪</a>
+</div>
+
+<div class="slide">
+<header><h1>calc()</h1></header>
+<figure><object data="files/calc2.html"></object></figure>
+<a href="files/calc2.html" target="play" class="objectlink">↪</a>
+</div>
+
+
+<div class="slide">
+  <header><h1>calc()</h1></header>
+    <section class="content">
+      <p>width of objects:</p>
+      <pre contenteditable>figure > :not(figcaption) {
+  width: calc(100% - 40px);
+}</pre>
+
+<p>also consider</p>
+<pre contenteditable>figure  {
+  box-sizing: border-box;
+}</pre>
+    </section>
+</div>
+
+<div class="slide">
+  <header><h1>box-sizing</h1></header>
+    <section class="content">
+    <pre contenteditable="">box-sizing: content-box | border-box</pre>
+    <div class="boxsizing"><div>content-box</div></div>
+    <div class="boxsizing"><div class="bb">border-box</div></div>
+<pre contenteditable="" style="float:left; margin-top:0;">div {
+width: 200px;
+height:100px;
+padding: 20px;
+margin:20px;
+border-width: 5px;
+}
+</pre>
+
+    <div class="boxsizing"><div class="bb">border-box</div></div>
+
+<p class="notes" style="clear:both">border-box replicates the old IE box model</p>
+    </section></div>
+
+
+<div class="slide">
+  <header><h1>CSS Future Functions</h1></header>
+    <section class="content" style="position: relative; top: -40px;">
+    <p>min()</p>
+    <pre contenteditable="">width: <b>min</b>(100px, 100%);
+width: <b>min</b>(90px + 50px, 30%);</pre>
+<p>max()</p>
+    <pre contenteditable="">width: <b>max</b>(100px, 100%);
+width: <b>max</b>(90px + 50px, 30%)</pre>
+<p>toggle()</p>
+    <pre contenteditable="">em {
+  font-style: <b>toggle</b>(normal, italic);
+}</pre>
+    </section></div>
+
+
+
+
+
+
+<div class="slide title">
+  <header><h1><a href="index.html">Home  ➹</a></h1></header>
+    <section class="content">
+    </section>
+</div>
 
 
 

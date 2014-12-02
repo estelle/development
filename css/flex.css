@@ -87,7 +87,6 @@ div.example {
 
 #selectors ul {
   display: flex;
-  border: 1px #ccc solid;
   margin: 1rem 0;
   line-height: 2rem;
   padding: 0; }
@@ -95,11 +94,12 @@ div.example {
 #selectors li {
   flex: 1;
   list-style-type: none;
-  text-align: center; }
+  text-align: center;
+  background-color: white;
+  color: #333; }
 
 #selectors li:nth-of-type(odd) {
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2) 50%, transparent 50%), -webkit-linear-gradient(left, transparent 40%, rgba(0, 0, 0, 0.2) 40%), -webkit-linear-gradient(left, transparent 60%, rgba(0, 0, 0, 0.2) 60%), -webkit-linear-gradient(left, transparent 50%, rgba(0, 0, 0, 0.2) 50%), -webkit-linear-gradient(left, transparent 40%, rgba(0, 0, 0, 0.2) 40%), -webkit-linear-gradient(left, transparent 60%, rgba(0, 0, 0, 0.2) 60%), -webkit-linear-gradient(left, red 14%, orange 15%, orange 28%, yellow 29%, yellow 42%, green 43%, green 56%, blue 57%, blue 70%, magenta 71%, magenta 85%, purple 86%), white;
-  -webkit-background-size: 1px 50%, 1px 50px, 32px, 120px, 80px, 70px, 500px;
+  background: #da0;
   color: #FFF; }
 
 :root {
@@ -245,3 +245,26 @@ div.divider p {
 
 figure > :not(figcaption) {
   width: calc(100% - 40px); }
+
+/* box-sizing */
+.boxsizing div {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px dashed #da0;
+  margin: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: content-box;
+  white-space: nowrap; }
+
+.boxsizing:first-of-type {
+  margin: 0 10px 0 0; }
+
+.boxsizing {
+  float: left;
+  border: 1px solid #da0;
+  margin: 20px 0 20px 20px; }
+
+.boxsizing div.bb {
+  box-sizing: border-box; }
