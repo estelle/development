@@ -64,7 +64,7 @@ header, section {
   padding: 10px 20px; }
 
 .slide {
-  transform: translate(100%, 0) scale(0.1) rotate(180deg);
+  transform: translate(0, -100%) scale(0.1) rotate(180deg);
   position: absolute;
   overflow: hidden;
   width: 100vw;
@@ -232,7 +232,7 @@ a[target=play] {
   right: 0;
   color: white;
   background-color: #000;
-  padding: 3px 5px;
+  padding: 3px 5px 3px 5px;
   border: none; }
 
 .slide.object {
@@ -271,7 +271,8 @@ pre, style {
 
 pre {
   max-height: 80vh;
-  overflow: auto; }
+  overflow: auto;
+  box-sizing: border-box; }
 
 @media print {
   .slide {
@@ -283,7 +284,6 @@ pre {
 
   @page {
     size: landscape; }
-
   body {
     font-size: 12pt;
     background: white; }
@@ -316,3 +316,5 @@ dt {
 
 .slide:after {
   color: #d0a; }
+
+/*# sourceMappingURL=index.css.map */

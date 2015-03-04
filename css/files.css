@@ -50,4 +50,7 @@ pre, style {
 
 pre {
   max-height: 80vh;
-  overflow: auto; }
+  overflow: auto;
+  box-sizing: border-box; }
+
+/*# sourceMappingURL=files.css.map */

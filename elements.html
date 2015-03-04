@@ -270,7 +270,7 @@ function newDoctype(el){
       <li>5 stars from Barns &amp; Noble</li>
    </ul>
 </details>
-<p>Not supported in FF (yet) or IE.</p>
+<p>Not yet supported in FF or IE.</p>
 </section>
 </div>
 
@@ -383,6 +383,8 @@ document.querySelector('#closemodal2').onclick = function() {
     </section>
 </div>
 
+
+
 <div class="slide">
 <pre contenteditable>
 &lt;table border='1' cellpadding=5&gt;
@@ -424,6 +426,28 @@ var data = [
  }
 &lt;/script&gt;</pre>
 </div>
+
+
+<div class="slide">
+    <section class="content"><pre> var data = [
+   { name: 'Sassafrass', color: 'Balinese', sex: 'Female (neutered)', temp: 'anti-social' },
+   { name: 'Baby Girl', color: 'Tabby', sex: 'Female (neutered)', temp: 'dog-like' },
+   { name: 'Katmandu', color: 'Orange Tabby', sex: 'Male (neutered)', temp: 'happy' }
+ ];
+ var template = document.querySelector('#row');
+ for (var i = 0; i < data.length; i += 1) {
+   var cat = data[i];
+   var clone = template.content.cloneNode(true);
+   var cells = clone.querySelectorAll('td');
+   cells[0].textContent = cat.name;
+   cells[1].textContent = cat.color;
+   cells[2].textContent = cat.sex;
+   cells[3].textContent = cat.temp;
+   template.parentNode.appendChild(clone);
+ }</pre>
+    </section>
+</div>
+
 
 <div class="slide">
   <pre contenteditable=""><strong>&lt;template id="foo"&gt;</strong>
@@ -718,7 +742,11 @@ overflow:scroll; text-align:center ">
      <a href="http://www.html5boilerplate.com/" class="objectlink" target="resource">www.html5boilerplate.com</a>
   </div>
 
-
+<div class="slide">
+  <header><h1></h1></header>
+    <section class="content"><a href="https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md" target=_blank>https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md</a>
+    </section>
+</div>
 
      <div class="slide">
       <header>

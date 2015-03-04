@@ -193,8 +193,8 @@ function hasaclass(selector) {
 <pre contenteditable>
 function hasaclass(slctr){
   var i = j = 0,
-      elements = document.<strong>querySelectorAll</strong>('.cur .ex li'),
-      cur = document.<strong>querySelectorAll</strong>('.cur .ex ' + slctr);
+      elements = document.<strong>querySelectorAll</strong>('li'),
+      cur = document.<strong>querySelectorAll</strong>(slctr);
 
   for (; i &lt; elements.length; i++){
     elements[i].<strong>classList.remove</strong>('active');
@@ -206,6 +206,14 @@ function hasaclass(slctr){
 }      </pre>
 
   </section>
+</div>
+
+<div class="slide">
+  <header><h1>Assignment 1</h1></header>
+    <section class="content">
+      <p>Every slide in this deck has the class of 'slide'.</p>
+      <p>Using the console, figure out how many slides there are in the whole deck</p.
+    </section>
 </div>
 
 <!-- Play time -->
@@ -234,6 +242,11 @@ function hasaclass(slctr){
       <li>E[attribute|=value]</li>
       <li>:first-child</li>
       <li>:lang()</li>
+      <li>:link</li>
+      <li>:visited</li>
+      <li>:hover</li>
+      <li>:active</li>
+      <li>:focuse</li>
       <li>:before</li>
       <li>::before</li>
       <li>::selection</li>
@@ -764,6 +777,10 @@ nav a:not(.foo, .bar, .bam) {
 <p>Matches:
  <pre contenteditable>&lt;p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- this is a comment --&gt;&lt;/p&gt;
+&lt;hr/&gt;
+&lt;img/&gt;
+&lt;br/&gt;
+&lt;input/&gt;
 </pre>
 </div>
 
@@ -926,7 +943,7 @@ ul <strong>></strong> li {} 0-0-2</pre>
     <li>Make the first cell in each data row have a red background.</li>
     <li>"Zebra stripe" the backgrounds of the rows, alternating between #FFF and #EEE.</li>
     <li>Turn the label red when the checkbox is clicked.</li>
-    <li>Make the first letter of the pepper name huge.</li>
+    <li>//Make the first letter of the pepper name huge.</li>
     <li>Make the links of peppers with hotness above 1 billion red.</li>
    </ol>
 

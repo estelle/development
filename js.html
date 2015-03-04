@@ -29,7 +29,7 @@
 
 <div class="slide">
 <header><h1>My First Framework</h1></header>
-<!--<figure><object data="http://estelleweyl.com/portfolio/dhtml.htm"></object></figure>-->
+<figure><object data="http://estelleweyl.com/portfolio/dhtml.htm"></object></figure>
 <a href="http://estelleweyl.com/portfolio/dhtml.htm" class="objectlink" target="foo">My old portfolio</a>
 </div>
 
@@ -182,9 +182,11 @@ Don't Reinvent The Wheel</h1></header>
 <header>
 <h1>Seriously?</h1></header>
 <section>
-<pre>&lt;script src="jquery.js"&gt;&lt;/script>
+<pre>&lt;script src="jquery.js"&gt;&lt;/script></pre>
 
-&lt;script type="text/javascript">
+for just...
+
+<pre>&lt;script type="text/javascript">
    $('li:first').addClass('first');
 &lt;/script>
 </pre>
@@ -193,13 +195,13 @@ Don't Reinvent The Wheel</h1></header>
 
 <div class="slide">
   <header><h1>Using a library</h1></header>
-<!--<figure><object data="http://jsfiddle.net/chriscoyier/WTAr9/"></object></figure>--><a href="http://jsfiddle.net/chriscoyier/WTAr9/" class="objectlink" target="foo">Go</a>
+<figure><object data="http://jsfiddle.net/chriscoyier/WTAr9/"></object></figure><a href="http://jsfiddle.net/chriscoyier/WTAr9/" class="objectlink" target="foo">Go</a>
 </div>
 
 
 <div class="slide">
   <header><h1>No library</h1></header>
-<!--<figure><object data="http://jsfiddle.net/estelle/WTAr9/210/"></object></figure>--><a href="http://jsfiddle.net/estelle/WTAr9/210/" class="objectlink" target="foo">Go</a>
+<figure><object data="http://jsfiddle.net/estelle/WTAr9/210/"></object></figure><a href="http://jsfiddle.net/estelle/WTAr9/210/" class="objectlink" target="foo">Go</a>
 </div>
 
 <div class="slide">
@@ -418,26 +420,23 @@ nav li<strong>:hover</strong> ul {
      <header><h1>Full Browser Support</h1></header>
      <section class="content">
 <pre contenteditable>nav > ul > li {
-  display: inline;
-  zoom: 1;
   display: inline-block;
-  position:relative;
+  position: relative;
 }
 nav ul ul {
-  -webkit-transform: scale(1,0);
+  -webkit-transform: scale(1,0); //Safari
   -ms-transform: scale(1,0);  // IE9
   transform: scale(1,0); // FF16, IE10, O-12.1
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
-  -webkit-transition: transform 0.2s linear 50ms;
-  transition: transform 0.2s linear 50ms; // IE10, FF16 O12.1
+  transition: all 0.2s linear 50ms; // IE10, FF16 O12.1
   position: absolute; top: 100%;
   display: none;
 }
 nav li:hover ul {
-  -webkit-transform: scale(1,1);
-  -ms-transform: scale(1,1);
+  -webkit-transform: scale(1,1); //Safari
+  -ms-transform: scale(1,1); //IE9
   transform: scale(1,1);
   display: block;
 }</pre>
@@ -461,8 +460,7 @@ nav li:hover ul {
      <section class="content">
 
 <p>on the document</p>
-     <pre contenteditable>document.getElementsByClassName('foo');
-     </pre>
+     <pre contenteditable>document.getElementsByClassName('foo');</pre>
 
 <p>on a DOM node</p>
 <pre contenteditable>el = document.getElementById('bar');
@@ -680,6 +678,20 @@ for(var i = 0; i &lt; foos.length; i++){
 </section>
 </div>
 
+<div class="slide">
+  <header><h1>Assignment</h1></header>
+    <section class="content">
+      <p>This slide, like all slides, has class 'slide'. The current slide also has class current. It is the only slide with that class. Some slides also have a class of 'intro'. </p>
+      <ol>
+        <li>Access the current slide.</li>
+        <li>Add and remove the 'intro' class</li>
+        <li>How many slides are there now, in all</li>
+        <li>How many slides don't have the 'distant-slide' class?
+      </ol>
+    </section>
+</div>
+
+
 
 <div class="slide title">
      <h1>data- &amp; dataset</h1>
@@ -813,7 +825,7 @@ for(var i=0; i &lt; cards.length; i++){
         <pre contenteditable>var cardID = info.getAttribute('data-value'); //10</pre>
         <p>or</p>
         <pre contenteditable>var cardID = info.dataset.value; //10</pre>
-        <p><small>All browsers support "data-*", but full support of 'dataset started with IE10, FF6, Safari 5.1, Chrome 7, Opera 11.1. Supported in iOS and Android. <a href="http://eligrey.com/blog/post/html-5-dataset-support">Polly fill</a> </small></p>
+        <p><small>All browsers support "data-*", but full support of 'dataset started with IE10, but if you need to support earlier IE, there's a <a href="http://eligrey.com/blog/post/html-5-dataset-support">Polly fill</a> </small></p>
       </section>
   </div>
 

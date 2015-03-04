@@ -24,3 +24,12 @@ a, strong, .title h1,
 .dont i {color: #c00;}
 
 pre em {color: #060;}
+
+pre {
+  background: linear-gradient(rgba(225,225,225, 0.1) 50%, rgba(33,33,33, 0.1) 50%);
+  background-size: 100% 3.12rem;
+  background-clip: padding-box;
+  background-position: 0 7px;
+  border-color: #ccc;
+  overflow: scroll;
+}
